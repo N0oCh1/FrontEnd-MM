@@ -1,0 +1,77 @@
+*{
+    font-family: 'REM', sans-serif;
+}
+body{
+    background-color: rgb(245, 245, 245);
+}
+
+header, footer{
+    text-align: center;
+    width: 300px;
+    margin: 30px auto 0px auto;
+}
+.container{
+    margin: 10px auto 10px auto;
+    width: 300px;
+}
+main{
+    width: 300px;
+    margin: 30px auto 0px auto;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+label{
+    display: block;
+    margin-bottom: 10px;
+    font-size: larger;
+}
+input{
+    display: inline;
+    width:  100%;
+    font-size: larger;
+    padding: 10px;
+    border-radius: 0 5px 5px 0;
+    border: none;
+}
+input[type = "email"]{
+    display: inline;
+    width: 95%;
+    font-size: larger;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: rgb(199, 199, 199);
+}
+.nick{
+    float: left;
+    width: 22px;
+    text-align: center;
+    font-weight: 600;
+    background-color: rgba(170, 168, 168, 0.668);
+    border-radius: 5px 0 0 5px;
+    border: none;
+}
+select{
+    width:  100%;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: larger;
+    color: rgb(181, 179, 179);
+    border: noneaw;
+}
+input[type = "submit"]{
+    width: 100%;
+    background-color: rgb(255, 0, 68);
+    color: white;
+    font-weight: 600;
+    border-radius: 15px;
+    border: 1px solid rgb(255, 0, 68);
+}
+.flexForDecorate{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
