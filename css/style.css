@@ -75,3 +75,12 @@ input[type = "submit"]{
     flex-direction: row;
     width: 100%;
 }
+.nightMode input{
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+.nightMode input:active{
+    background-color: gray;
+    color: black;
+}
