@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de divisas</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="add.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <h1>Conversor de divisas</h1>
+            </div>
+        </header>
+        <main>
+            <!-- form init -->
+            <form action="#" id="conversor">
+                <!--I put the value-->
+                <div id="myInput">
+                    <label for="dolar">dolar USA</label>
+                    <input type="number" name="dollar" id="putQuantity" required class="box">
+                </div>
+                <!--img for design-->
+                <div>
+                    <p><img src="img/arrowDown.png" alt="arrowDown"></p>
+                </div>
+                <!--choice Badge-->
+                <div id="divisaForm">
+                    <label for="divisa">Elige a cual convertir</label>
+                    <div id="errorBadge"></div>
+                    <select name="divisa" id="divisa"class="box">
+                        <option value="defaut">--elige la divisa--</option>
+                        <option value="euro">Euro</option>
+                        <option value="yuan">Yuan</option>
+                        <option value="mxn">Peso Mexicano</option>
+                    </select>
+                </div>
+                <!--submit button-->
+                <div id="enviar">
+                    <input type="submit" name="submit" value="Convertir"class="buttonConvert">
+                </div>
+            </form>
+            <!--show result-->
+            <div class="resultBox">
+                <label for="result">Tu conversion</label> 
+                <div id="result"></div>
+            </div>
+            
+        </main>
+    </div>
+</body>
+</html>
