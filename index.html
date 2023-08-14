@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    
+    <script src="./js/script.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -22,9 +22,11 @@
         </header>
         <!--formulario-->
         <main>
-            <form action="#" class="register">
+            <form action="juego.html" class="register" id="formularioJuego">
+                <!--usuario-->
                 <div class="ItemFormUserName">
                     <label for="name">Introduce tu NickName</label>
+                    <div><p id="errorName"></p></div>
                     <div class="flexForDecorate">
                         <input type="text" name="@" id="@" value="@" class="nick" readonly>
                         <input type="text" name = "name" id ="name">
@@ -40,16 +42,17 @@
                 <!--eleccion el tamaño-->
                 <div class="ItemFormSize">
                     <label for="choice">Introduce el tamaño</label>
+                    <div id="errorTamano"></div>
                     <select name="tamano" id="tamano">
-                        <option value="tamano">--seleciona el tamaño--</option> 
-                        <option value="4x4">4x4</option>
-                        <option value="8x8">8x8</option> 
-                        <option value="16x16">16x16</option>  
+                        <option value="0">--seleciona el tamaño--</option> 
+                        <option value="1">4x4</option>
+                        <option value="2">8x8</option> 
+                        <option value="3">16x16</option>  
                     </select>
                 </div>
                 <!--inicio del juego-->
                 <div class="button">
-                    <p><input type="submit" value="JUGAR"></p>
+                    <input type="submit" value="JUGAR" id="Jugar">
                 </div>
             </form>
             <!--eleccion de avatares-->
@@ -66,5 +69,5 @@
         </footer>
     </div>
 </body>
-<script src="./js/script.js"></script>
+
 </html>
