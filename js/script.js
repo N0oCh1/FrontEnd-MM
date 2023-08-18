@@ -5,8 +5,14 @@ const form = document.getElementById("formularioJuego");
 const gameInit = document.getElementById('Jugar');
 const errorName = document.getElementById('errorName');
 const errorTamano = document.getElementById('errorTamano');
+const error = document.getElementById('error');
 const tamano = document.getElementById('tamano');
 var emailForm = document.getElementById('email');
+
+if(sessionStorage.getItem('error')!= null){
+    error.innerText = sessionStorage.getItem('error');
+    sessionStorage.removeItem('error');
+}
 
 //elementari value
 const backGround = document.body;
@@ -62,6 +68,7 @@ function formValidation(event){
         choice = true;
     }
     if(name == true && choice == true){
+        datosUsuarios(nameForm);
         return true;
     }
 }

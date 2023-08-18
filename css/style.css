@@ -89,6 +89,6 @@ input[type = "submit"]{
     background-color: rgb(79, 32, 32);
 }
 
-#errorName, #errorTamano{
+#errorName, #errorTamano, #error{
     color:  red;
 }
