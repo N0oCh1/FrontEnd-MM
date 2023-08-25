@@ -1,0 +1,120 @@
+/* opcionales */
+    .opcionales{
+        display: block;
+        position: absolute;
+        top: 100%;
+        margin: 0px auto 0px auto;
+        justify-content: center;
+        justify-self: center;
+    }
+
+/* contenedor de la pagina */
+    #container{
+        width: 70%;
+        height: max-content;
+        margin: 20px auto 0px auto;
+
+    }
+
+/* body */
+    body{
+        background-color: rgb(233, 233, 233);
+    }
+/* image */
+
+
+
+/* diseño de la zona de juego  */
+    #juego{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        justify-content: center;
+        background-color: white;
+        height: 300px;
+        width: 300px;
+        gap: 10px;
+        border: 1px solid black;
+        padding: 20px;
+    }
+    .containerJuego{
+
+        
+        float: left;
+
+    }
+    .titulo{
+        margin: 0px;
+        text-align: center;
+        padding: 10px 0px 10px 0px;
+        display: block;
+        background-color: rgb(90, 2, 2);
+        color: white;
+        font-size: 30px;
+    }
+/* diseño de los objetos del juego */
+
+#containerItem{
+    display: flex;
+    place-self: center;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#item{
+    width: 70%;
+    height: 70%;
+    border-radius: 5px;
+    background-color: green;
+
+}
+
+/* diseño de la tabla de puntuacion */
+    .infoUsuario{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        width: auto;
+    }
+    #formUsuario{
+        margin: 0px auto 0px auto;
+    }
+    label{
+        display: block;
+        margin-top:  30px;
+        font-size: larger;
+    }
+    /* usuario */
+
+        .imagen{
+            width: 40px;
+            height: 40px;
+            float: left;
+            border: 1px solid black;
+        }
+        .usuario{
+            display: flex;
+            height: auto;
+        }
+        #usuario{
+            width: 100%;
+            padding: 0px;
+            height: 41px;
+            font-size: larger;
+        }
+    /* puntuacion */
+        #puntuacion{
+            width: 100%;
+            height: 40px;
+            font-size: larger;
+        }
+    /* temporizador */
+        #time{
+            width: 100%;
+            height: 40px;
+            font-size: larger;
+        }

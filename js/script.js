@@ -1,21 +1,51 @@
-
-// const of the form  
-const nameForm =document.getElementById('name');
-const form = document.getElementById("formularioJuego");
-const gameInit = document.getElementById('Jugar');
-const errorName = document.getElementById('errorName');
-const errorTamano = document.getElementById('errorTamano');
-const tamano = document.getElementById('tamano');
-var emailForm = document.getElementById('email');
-
+var nameForm;
+var form;
+var gameInit;
+var errorName;
+var errorTamano;
+var error;
+var tamano;
+var emailForm;
 //elementari value
-const backGround = document.body;
-const button = document.getElementById('nightMode');
-
+var backGround;
+var button;
 var nightMode = new Boolean(false); 
-
-// night mode active and desactive
-button.onclick = () =>{
+// avatar variable
+var avatarItem;
+var itemImg;
+var avatarChoice;
+// call function if all DOM is loaded
+document.addEventListener('DOMContentLoaded', loadDom);
+//get element from html document and execute all function with needed 
+function loadDom(){
+    nameForm =document.getElementById('name');
+    form = document.getElementById("formularioJuego");
+    gameInit = document.getElementById('Jugar');
+    errorName = document.getElementById('errorName');
+    errorTamano = document.getElementById('errorTamano');
+    error = document.getElementById('error');
+    tamano = document.getElementById('tamano');
+    emailForm = document.getElementById('email');
+    // optional getElement
+    backGround = document.body;
+    button = document.getElementById('nightMode');
+    
+    // check error form
+    if(sessionStorage.getItem('error')!= null){
+        error.innerText = sessionStorage.getItem('error');
+        sessionStorage.removeItem('error');
+    }
+    //get avatar document 
+    avatarItem = document.getElementsByClassName('avatarItem');
+    avatarChoice = document.getElementById('avatar');
+    // allway I click on email = erase 
+    emailForm.addEventListener('click',() =>{
+    if(emailForm.value == "ejemplo@ejemplo.com"){
+        emailForm.value = "";    
+    }
+    });
+    // night mode active and desactive
+    button.onclick = () =>{
     if (nightMode){
         nightMode = false;
         backGround.style.backgroundColor='rgb(46, 46, 46)';
@@ -24,18 +54,12 @@ button.onclick = () =>{
         nightMode = true;
         backGround.style.backgroundColor='rgb(245, 245, 245)';
     }
+
 };
-// allway I click on email = erase 
-emailForm.onclick = () => {
-    if(emailForm.value == "ejemplo@ejemplo.com"){
-        emailForm.value = "";    
-    }
-};
+
 
 //form validation
-
 form.addEventListener('submit', formValidation);
-
 function formValidation(event){
     var name = new Boolean(false);
     var choice = new Boolean(false);
@@ -62,6 +86,25 @@ function formValidation(event){
         choice = true;
     }
     if(name == true && choice == true){
+        datosUsuarios(nameForm);
+        getDatosUsuario();
+        guardarHistoricos(nameForm);
+        avatarColor(avatarChoice.style.backgroundColor);
         return true;
+    }
+} 
+    for (let item of avatarItem){
+        item.addEventListener('dragstart', moviendoIMG);
+        
+    }
+    function moviendoIMG(event) {
+        itemImg = event.target.style.backgroundColor;
+        console.log(itemImg);
+    }
+    avatarChoice.addEventListener('dragover', (event)=>{event.preventDefault()});
+    avatarChoice.addEventListener('drop', ponerImg);
+    function ponerImg() {
+        avatarColor(itemImg);
+        avatarChoice.style.backgroundColor = itemImg;
     }
 }
