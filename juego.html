@@ -4,13 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/styleJuego.css">
     <script src="./js/userStorage.js" defer></script>
     <script src="./js/juego.js" defer></script>
 </head>
 <body>
+<!--aqui comienza el html-->
+<div id="container">
+    <!--grid del juego-->
+    <div class="containerJuego">
+        <div id="juego">
+            <div id="containerItem"><div id="item"></div></div>
+            <div id="containerItem"><div id="item"></div></div>
+            <div id="containerItem"><div id="item"></div></div>
+            <div id="containerItem"><div id="item"></div></div>
+            <div id="containerItem"><div id="item"></div></div>
+            <div id="containerItem"><div id="item"></div></div>
+            <div id="containerItem"><div id="item"></div></div>
+            <div id="containerItem"><div id="item"></div></div>
+            <div id="containerItem"><div id="item"></div></div>
+        </div>
+        <!--titulo-->
+    <div class="titulo">
+        <p>MASTERDOT</p>
+    </div>
+</div>
+    <!--tabla de informacion (va en la parte derecha)-->
+    <div class="infoUsuario" id="infoUsuario">
+        <form action="juego.html" id="formUsuario">
+            <label for="usuario"></label>
+            <div class="usuario">
+                <div class="imagen" id="avatar"></div>
+                <input type="text" name="usuario" id="usuario" value="ejemplo" readonly>
+            </div>
+            <div class="puntuacion">
+                <label for="puntuacion">Puntuacion</label>
+                <input type="text" value="0" id="puntuacion">
+            </div>
+            <div class="timer">
+                <label for="tiempo">Tiempo restante</label>
+                <input type="timer" value="30" id="time">
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!--chorradas random cosas de API-->
+<footer class="opcionales">
     <h1>juego Dot</h1>
     <form action="index.html" id="button">
         <input type="submit" name="return" id="return" value="regresar">
     </form>
+    <div >
+        <p id="Info"></p>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: center; background-color: rgb(221, 221, 221); font-size: 20px; font-weight: bold;">
+        <label for="img">Borrar Historico</label>
+        <p><button id="borrarHistorico"><img src="https://cdn-icons-png.flaticon.com/512/3143/3143497.png" alt="basurrero" style="width:20px; border: none;"></button></p>
+    </div>
+    <div style="display: block;">
+        <p id = "location"></p>
+    </div>
+</footer>
 </body>
 </html>
