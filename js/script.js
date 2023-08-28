@@ -4,7 +4,6 @@ var gameInit;
 var errorName;
 var errorTamano;
 var error;
-var tamano;
 var emailForm;
 //elementari value
 var backGround;
@@ -14,6 +13,8 @@ var nightMode = new Boolean(false);
 var avatarItem;
 var itemImg;
 var avatarChoice;
+//elegir tamaño 
+var tamano;
 // call function if all DOM is loaded
 document.addEventListener('DOMContentLoaded', loadDom);
 //get element from html document and execute all function with needed 
@@ -89,7 +90,9 @@ function formValidation(event){
         datosUsuarios(nameForm);
         getDatosUsuario();
         guardarHistoricos(nameForm);
+        guardarTamano(tamano.value);
         avatarColor(avatarChoice.style.backgroundColor);
+        
         return true;
     }
 } 
