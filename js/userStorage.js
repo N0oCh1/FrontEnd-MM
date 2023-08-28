@@ -15,6 +15,9 @@ function getDatosUsuario(){
 function avatarColor(color) {
     sessionStorage.setItem('avatarColor', color);
 }
+function guardarTamano(tamano) {
+    sessionStorage.setItem('tamano',tamano)
+}
 function comprobarDatosUsuario(){
     console.log(nick);
     if(nick == null)
