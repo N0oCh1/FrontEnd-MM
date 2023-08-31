@@ -55,8 +55,9 @@ function programarEventoDelJuego() {
         console.log(punto);
         punto.addEventListener("mousedown", marcarPunto);
         punto.addEventListener("mouseover", marcarPuntoDeslizando);
-        punto.addEventListener("mouseup", mouseFuera);
+        
     }
+    document.addEventListener("mouseup", mouseFuera);
 }
 function marcarPunto(event) {
     puntoMarcado = true;
@@ -90,7 +91,6 @@ function mouseFuera(event) {
     tocoRojo = false;
     tocoVerde = false;
 }
-
 
 
 
